@@ -32,15 +32,16 @@ int main(){
         char opp= buf[0];
         char player= buf[2];
         
-        // printf("%c %c\n", opp, player);
-        
         int points = 0; 
+        
+        
         switch(player){
             
             case 'X':
                 //LOSE 
                 
                 points = LOSE;
+                
                 if(opp == 'C'){
                     points+= PAPER;
                 } else if(opp == 'B'){
@@ -88,25 +89,6 @@ int main(){
         } 
         
         totalScore += points;
-        
-        printf("Total Score: %d\n", totalScore);
-        
-        
-        
-        // totalScore += determineWinner(opp, player);
-        
-        /*
-        int totalScore = 0;
-        char opp;
-        char player;
-        
-        - seperate line into letters
-        - - set first letter to opp, and second letter to player
-        - compare letters
-        - determine win/lose/draw
-        - totalScore+= playerLetter + win/lose/draw
-        
-        */
         
     }
     

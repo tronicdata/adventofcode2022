@@ -29,29 +29,20 @@ int main(){
         char opp= buf[0];
         char player= buf[2];
         
-        // printf("%c %c\n", opp, player);
-        
         int points = 0; 
         switch(player){
             
             case 'X':
                 
                 points = 1;
-                printf("X vs %c\n", opp);
                 
                 if(opp == 'C'){
-                    printf("WIN!\n");
                     points+= WIN;
                 } else if(opp == 'B'){
-                    printf("LOSE!\n");
                     points+= LOSE;
                 } else {
-                    printf("DRAW!\n");
                     points+= DRAW;
                 }
-                
-                
-                printf("Points scored: %d\n", points);
                 
                 break;
                 
@@ -59,15 +50,11 @@ int main(){
             
                 points = 2;
                 
-                printf("Y vs %c\n", opp);
                 if(opp == 'A'){
-                    printf("WIN!\n");
                     points+= WIN;
                 } else if(opp == 'C'){
-                    printf("LOSE!\n");
                     points+= LOSE;
                 } else {
-                    printf("DRAW!\n");
                     points+= DRAW;
                 }
                 
@@ -75,19 +62,13 @@ int main(){
                 
             case 'Z':
             
-            
-                printf("Z vs %c\n", opp);
-            
                 points = 3;
                 
                 if(opp == 'B'){
-                    printf("WIN!\n");
                     points+= WIN;
                 } else if(opp == 'A'){
-                    printf("LOSE!\n");
                     points+= LOSE;
                 } else {
-                    printf("DRAW!\n");
                     points+= DRAW;
                 }
                 
@@ -100,25 +81,6 @@ int main(){
         } 
         
         totalScore += points;
-        
-        printf("Total Score: %d\n", totalScore);
-        
-        
-        
-        // totalScore += determineWinner(opp, player);
-        
-        /*
-        int totalScore = 0;
-        char opp;
-        char player;
-        
-        - seperate line into letters
-        - - set first letter to opp, and second letter to player
-        - compare letters
-        - determine win/lose/draw
-        - totalScore+= playerLetter + win/lose/draw
-        
-        */
         
     }
     
